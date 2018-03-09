@@ -81,7 +81,7 @@ export default class Login extends Component {
                                     color='#007AFF'
                                     style={styles.iconSize}
                                 />
-                                <TextInput style={{ width: 170, marginLeft: 20, fontFamily: 'Ubuntu-B' }}
+                                <TextInput style={{ width: 170, marginLeft: 20,  }}
                                     underlineColorAndroid="transparent"
                                     placeholder="User Name/Password"
                                     fontSize={14}
@@ -97,7 +97,7 @@ export default class Login extends Component {
                                     color='#007AFF'
                                     style={styles.iconSize}
                                 />
-                                <TextInput style={{ width: 170, marginLeft: 20, fontFamily: 'Ubuntu-B' }}
+                                <TextInput style={{ width: 170, marginLeft: 20,}}
                                     underlineColorAndroid="transparent"
                                     placeholder="* * * * * * * *"
                                     fontSize={14}
@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
         fontSize: 75,
         marginTop: 20,
         color: 'white',
-        fontFamily: "ARB-218 finished FREEWARE"
+        
     },
 
     ButtonStyle: {

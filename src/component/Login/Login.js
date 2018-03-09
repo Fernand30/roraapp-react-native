@@ -5,6 +5,9 @@ import Toast from 'react-native-simple-toast';
 import Storage from 'react-native-storage';
 import { AsyncStorage } from 'react-native';
 var REQUEST_URL = 'http://139.59.61.15/Roraa/index.php/Service/Users/Login';
+import { Constants, Color, Images } from '../../themes'
+//Usr:   pkshefi@hotmail.com
+//pwd:   Ro@123
 export default class Login extends Component {
     constructor(props) {
         super(props);
@@ -68,8 +71,8 @@ export default class Login extends Component {
                 >
 
                     <View style={styles.uprtextcontainer}>
-                        <Text style={styles.uprtext}>Let's{'\nRoar'}</Text>
-
+                        <Text style={styles.uprtext}>Let's</Text>
+                        <Text style={styles.uprtext1}>Roar</Text>
                     </View>
                     <View>
                         <View >
@@ -77,11 +80,11 @@ export default class Login extends Component {
                             <View style={styles.input}>
                                 <Icon
                                     name='user'
-                                    size={20}
+                                    size={Constants.UnitMargin*50}
                                     color='#007AFF'
                                     style={styles.iconSize}
                                 />
-                                <TextInput style={{ width: 170, marginLeft: 20, fontFamily: 'Ubuntu-B' }}
+                                <TextInput style={styles.textinput}
                                     underlineColorAndroid="transparent"
                                     placeholder="User Name/Password"
                                     fontSize={14}
@@ -90,14 +93,14 @@ export default class Login extends Component {
                                     onChangeText={(text) => this.setState({ email: text })}
                                 />
                             </View>
-                            <View style={styles.input}>
+                            <View style={styles.input1}>
                                 <Icon
                                     name='lock'
                                     size={20}
                                     color='#007AFF'
                                     style={styles.iconSize}
                                 />
-                                <TextInput style={{ width: 170, marginLeft: 20, fontFamily: 'Ubuntu-B' }}
+                                <TextInput style={styles.textinput}
                                     underlineColorAndroid="transparent"
                                     placeholder="* * * * * * * *"
                                     fontSize={14}
@@ -113,12 +116,7 @@ export default class Login extends Component {
                                 <Text style={styles.text}>Log in</Text>
                             </TouchableOpacity>
                             <View style={{ alignItems: 'center' }}>
-                                <Text style={{
-                                    color: 'red',
-                                    fontSize: 14,
-                                    marginTop: 18,
-                                    alignItems: 'center',
-                                }}>Forgot password ?</Text>
+                                <Text style={styles.forgotText}>Forgot password ?</Text>
                             </View>
                         </View>
                     </View>
@@ -154,20 +152,42 @@ const styles = StyleSheet.create({
     },
 
     uprtext: {
-        fontSize: 75,
-        marginTop: 20,
+        fontSize: Constants.UnitFontSize*120,
+        marginTop: Constants.UnitMargin*100,
         color: 'white',
-        fontFamily: "ARB-218 finished FREEWARE"
+        fontWeight: '800',
+        height: Constants.UnitMargin*200,
+        lineHeight: Constants.UnitMargin*240,
+        overflow: "visible"
+    },
+
+    uprtext1: {
+        fontSize: Constants.UnitFontSize*120,
+        color: 'white',
+        fontWeight: '800',
+        height: Constants.UnitMargin*200,
+        lineHeight: Constants.UnitMargin*240,
+        overflow: "visible"
     },
 
     ButtonStyle: {
         backgroundColor: '#0CB863',
-        width: 239,
+        width: Constants.UnitMargin*650,
+        height: Constants.UnitMargin*125,
         alignItems: 'center',
         justifyContent: 'center',
-        height: 45,
-        marginTop: 75,
-        borderRadius: 65,
+        marginTop: Constants.UnitMargin*185,
+        borderRadius: Constants.UnitMargin*125/2,
+        shadowOffset:{  width: 0,  height: 1,  },
+        shadowColor: 'black',
+        shadowOpacity: 0.4,
+    },
+
+    forgotText:{
+        color: 'red',
+        fontSize: 14,
+        marginTop: 18,
+        alignItems: 'center',
     },
 
     input: {
@@ -175,19 +195,41 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'flex-start',
         alignItems: 'center',
-        marginTop: 37,
-        borderWidth: .5,
-        borderRadius: 65,
-        width: 239,
-        height: 50,
+        marginTop: Constants.UnitMargin*200,
+        borderWidth: 0,
+        borderRadius: Constants.UnitMargin*125/2,
+        width: Constants.UnitMargin*650,
+        height: Constants.UnitMargin*125,
+        shadowOffset:{  width: 0,  height: 1,  },
+        shadowColor: 'black',
+        shadowOpacity: 0.4,
     },
+
+    input1: {
+        backgroundColor: 'white',
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        marginTop: Constants.UnitMargin*100,
+        borderWidth: 0,
+        borderRadius: Constants.UnitMargin*125/2,
+        width: Constants.UnitMargin*650,
+        height: Constants.UnitMargin*125,
+        shadowOffset:{  width: 0,  height: 1,  },
+        shadowColor: 'black',
+        shadowOpacity: 0.4,
+    },
+
+    textinput:{
+        width: Constants.UnitMargin*450,
+        marginLeft: Constants.UnitMargin*50,
+    },
+
     text: {
         color: 'white',
-        fontSize: 17,
-        fontWeight: 'bold',
+        fontWeight: '900',
+        fontSize: Constants.UnitFontSize*20,
         alignItems: 'center',
-
-
     },
     fpass: {
         color: 'red',

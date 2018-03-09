@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, ImageBackground, TouchableOpacity, Image } from 'react-native';
-
+import { Constants, Color, Images } from '../../themes'
 export default class Welcome extends Component {
     render() {
         const { navigate } = this.props.navigation;
         return (
-            <ImageBackground source={require('../../images/Landingscreen.png')} style={styles.container}>
+            <ImageBackground source={Images.Landingscreen} style={styles.container}>
                 <View style={{ flex: 1 }} >
                     <View style={styles.hicontainer}>
                         <Text style={styles.upperTextStyle}>Hi</Text>
@@ -43,30 +43,33 @@ const styles = StyleSheet.create({
     },
     text: {
         color: 'white',
-        fontWeight: 'bold',
-        fontSize: 16
-
+        fontWeight: '900',
+        fontSize: Constants.UnitFontSize*20,
     },
 
     login: {
         backgroundColor: '#FF398A',
-        width: 239,
-        height: 45,
+        width: Constants.UnitMargin*650,
+        height: Constants.UnitMargin*650/239*45,
         marginTop: 0,
         alignItems: 'center',
         justifyContent: 'center',
-        borderRadius: 64
-
-
+        borderRadius: Constants.UnitMargin*650/239*45/2,
+        shadowOffset:{  width: 0,  height: 0,  },
+        shadowColor: 'black',
+        shadowOpacity: 0.4,
     },
     signup: {
         backgroundColor: '#007AFF',
-        width: 239,
-        marginTop: 25,
+        width: Constants.UnitMargin*650,
+        height: Constants.UnitMargin*650/239*45,
+        marginTop: Constants.UnitMargin*650/239*25,
         alignItems: 'center',
         justifyContent: 'center',
-        height: 45,
-        borderRadius: 64
+        borderRadius: Constants.UnitMargin*650/239*45/2,
+        shadowOffset:{  width: 0,  height: 0,  },
+        shadowColor: 'black',
+        shadowOpacity: 0.4,
     },
     hicontainer: {
         height: 280,
@@ -74,9 +77,9 @@ const styles = StyleSheet.create({
         alignItems: 'flex-start'
     },
     upperTextStyle: {
-        fontSize: 160,
+        fontSize: Constants.UnitFontSize*170,
         color: 'white',
-        fontFamily: "PassionOne-Regular"
+        fontWeight: '900'
     },
     container1: {
 

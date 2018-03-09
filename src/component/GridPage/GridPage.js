@@ -53,7 +53,7 @@ export default class GridPage extends Component {
                     renderItem={item => (
                         <View style={backgroundColor = 'transparent'}  >
                             <Image style={styles.imageStyle} source={require('..//../images/tomc.jpg')} />
-                            <Text style={{ color: 'white', position: 'absolute', fontFamily: 'Ubuntu-B', alignSelf: 'center', alignContent: 'center', bottom: 15, fontSize: 20 }}>{this.state.title}</Text>
+                            <Text style={{ color: 'white', position: 'absolute', alignSelf: 'center', alignContent: 'center', bottom: 15, fontSize: 20 }}>{this.state.title}</Text>
                             <View style={{ position: 'absolute', width: 50, height: 50, right: 1, top: 10, backgroundColor: 'transparent' }}>
                                 <RoundCheckbox
                                     size={40}

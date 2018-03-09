@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import RoundCheckbox from 'rn-round-checkbox';
 import Toast from 'react-native-simple-toast';
 import ModalDropdown from 'react-native-modal-dropdown';
-
+import { Constants, Color } from '../../themes'
 
 var REQUEST_URL = 'http://139.59.61.15/Roraa/index.php/Service/Users/Registration';
 export default class Signup extends Component {
@@ -81,7 +81,7 @@ export default class Signup extends Component {
                             color='#007AFF'
                             style={styles.iconSize}
                         />
-                        <TextInput style={{ width: 170, marginLeft: 20, fontFamily: 'Ubuntu-B' }}
+                        <TextInput style={{ width: 170, marginLeft: 20,  }}
                             underlineColorAndroid="transparent"
                             placeholder="User Name"
                             fontSize={14}
@@ -98,7 +98,7 @@ export default class Signup extends Component {
                             color='#007AFF'
                             style={styles.iconSize}
                         />
-                        <TextInput style={{ width: 170, marginLeft: 20, fontFamily: 'Ubuntu-B' }}
+                        <TextInput style={{ width: 170, marginLeft: 20, }}
                             underlineColorAndroid="transparent"
                             placeholder="Email"
                             fontSize={14}
@@ -116,7 +116,7 @@ export default class Signup extends Component {
                             color='#007AFF'
                             style={styles.iconSize}
                         />
-                        <TextInput style={{ width: 170, marginLeft: 20, fontFamily: 'Ubuntu-B' }}
+                        <TextInput style={{ width: 170, marginLeft: 20,  }}
                             underlineColorAndroid="transparent"
                             placeholder="* * * * * *"
                             fontSize={14}
@@ -215,7 +215,7 @@ const styles = StyleSheet.create({
         fontSize: 42,
         marginTop: 10,
         color: 'white',
-        fontFamily: "ARB-218 finished FREEWARE"
+        
     },
     signup: {
         backgroundColor: '#3498db',

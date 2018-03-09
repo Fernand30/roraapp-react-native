@@ -123,8 +123,8 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         position: 'absolute',
         color: 'white',
-        fontFamily: 'Ubuntu-B'
-        , fontSize: 23,
+        
+        fontSize: 23,
         marginLeft: 10,
         marginTop: 9,
     },
